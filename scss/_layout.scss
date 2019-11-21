@@ -1,0 +1,48 @@
+// _layout.scss
+@import 'variables';
+
+@mixin templateGrid {
+  display: grid;
+
+  // Small screen
+  @media screen and (max-width: $smallScreen) {
+
+  }
+
+  // Normal screen
+  @media screen and (min-width: $normalScreen) {
+    grid-template-columns: 300px auto;
+    grid-template-rows: 300px auto;
+    grid-template-areas: 
+    "picture main"
+    "info main"
+  }
+
+}
+
+@mixin templateMain {
+  grid-template-columns: auto;
+  grid-template-rows: 20px auto;
+}
+
+@mixin pictureGrid {
+  grid-area: picture;
+}
+
+@mixin infoGrid {
+  grid-area: info;
+}
+
+@mixin mainGrid {
+  grid-area: main;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px auto 60px auto;
+  grid-template-areas: 
+  "jobHead"
+  "jobDate"
+  "knowlageHead"
+  "knowlageData";
+}
+

@@ -1,3 +1,62 @@
 // main.scss
-
+@import 'variables';
 @import 'layout';
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  @include templateGrid;
+}
+
+figure {
+  @include pictureGrid;
+  margin: 0;
+
+  overflow: hidden;
+  object-fit: contain;
+
+  img {
+    width: 100%;
+  }
+}
+
+.info {
+  @include infoGrid;
+}
+
+main {
+  @include mainGrid;
+
+  ul {
+    background-color: $sectionColor;
+    list-style-type: none;
+  }
+  
+  .jobHead {
+    grid-area: jobHead;
+    max-height: 50px;
+  }
+  
+  .jobDate {
+    grid-area: jobDate;
+    display: flex;
+    flex-flow: column wrap;  
+  }
+  
+  section {
+    display: flex;
+
+    p {
+      margin: 5px;
+    }
+  
+    .date {
+      min-width: 50px;
+    }
+  
+    .information {
+      min-width: 100px;
+    }
+  }
+
+}
