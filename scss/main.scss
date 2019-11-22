@@ -20,10 +20,6 @@ figure {
   }
 }
 
-.info {
-  @include infoGrid;
-}
-
 main {
   @include mainGrid;
   margin: 0 0 0 10px;
@@ -37,19 +33,33 @@ main {
     grid-area: jobHead;
     max-height: 50px;
   }
-  
-  .jobDate {
-    grid-area: jobDate;
+  .jobData {
+    grid-area: jobData;
     display: flex;
     flex-flow: column wrap;  
   }
+  
+  .educationHead {
+    grid-area: educationHead;
+  }
+  .educationData {
+    grid-area: educationData;
+  }
+
+  .knowlageHead {
+    grid-area: knowlageHead;
+  }
+  .knowlageData {
+    grid-area: knowlageData;
+  }
+
   
   section {
     display: flex;
 
     p {
       margin: 5px;
-      
+      padding: 0 5px 0 0;
     }
   
     .date {
