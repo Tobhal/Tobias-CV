@@ -26,6 +26,7 @@ figure {
 
 main {
   @include mainGrid;
+  margin: 0 0 0 10px;
 
   ul {
     background-color: $sectionColor;
@@ -48,10 +49,12 @@ main {
 
     p {
       margin: 5px;
+      
     }
   
     .date {
       min-width: 50px;
+      border-right-style: solid;
     }
   
     .information {

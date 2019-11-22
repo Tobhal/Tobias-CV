@@ -38,10 +38,12 @@
 
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 60px auto 60px auto;
+  grid-template-rows: 60px auto 60px auto 60px auto;
   grid-template-areas: 
   "jobHead"
   "jobDate"
+  "educationHead"
+  "educationData"
   "knowlageHead"
   "knowlageData";
 }
