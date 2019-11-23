@@ -1,30 +1,31 @@
 window.onload = startup;
 
 function startup() {
-  document.getElementsByClassName("jobHead")[0].addEventListener("click", function() {
-    hideData("jobData");
+  document.getElementById("main").addEventListener("click", function() {
+    hideData("main");
   });
-  document.getElementsByClassName("educationHead")[0].addEventListener("click", function() {
-    hideData("educationData");
+  document.getElementById("education").addEventListener("click", function() {
+    hideData("education");
   });
-  document.getElementsByClassName("knowlageHead")[0].addEventListener("click", function() {
-    hideData("knowlageData");
+  document.getElementById("knowlage").addEventListener("click", function() {
+    hideData("knowlage");
   });
-
-
 };
+
+
 
 function hideData(data) {
   let element = document.getElementsByClassName(data)[0];
-  //console.log("element = " + data + "Style = " + element.style.display);
-
-
 
   if (element.style.display != "none") {
     console.log("show");
-    element.style.display = "none";
+    for (let i = 0; i < document.getElementsByClassName("main").length; i++) {
+      document.getElementsByClassName(data)[i].style.display = "none"
+    };
   } else {
     console.log("hidden");
-    element.style.display = "";
+    for (let i = 0; i < document.getElementsByClassName("main").length; i++) {
+      document.getElementsByClassName(data)[i].style.display = ""
+    };
   }
 }

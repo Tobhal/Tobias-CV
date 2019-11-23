@@ -36,15 +36,7 @@
 @mixin mainGrid {
   grid-area: main;
 
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 60px auto 60px auto 60px auto;
-  grid-template-areas: 
-  "jobHead"
-  "jobData"
-  "educationHead"
-  "educationData"
-  "knowlageHead"
-  "knowlageData";
+  display: flex;
+  flex-flow: column wrap;
 }
 
