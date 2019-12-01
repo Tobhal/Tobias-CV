@@ -11,14 +11,11 @@ function startup() {
     hideData("knowlageData");
   });
 
-
 };
 
 function hideData(data) {
   let element = document.getElementsByClassName(data)[0];
   //console.log("element = " + data + "Style = " + element.style.display);
-
-
 
   if (element.style.display != "none") {
     console.log("show");
