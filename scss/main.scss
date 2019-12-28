@@ -28,34 +28,14 @@ main {
     background-color: $sectionColor;
     list-style-type: none;
   }
-  
-  .jobHead {
-    grid-area: jobHead;
-    max-height: 50px;
-  }
-  .jobData {
-    grid-area: jobData;
-    display: flex;
-    flex-flow: column wrap;  
-  }
-  
-  .educationHead {
-    grid-area: educationHead;
-  }
-  .educationData {
-    grid-area: educationData;
-  }
 
-  .knowlageHead {
-    grid-area: knowlageHead;
+  h2 {
+    margin: 10px 0 10px 0;
   }
-  .knowlageData {
-    grid-area: knowlageData;
-  }
-
   
   section {
     display: flex;
+    margin-bottom: 5px;
 
     p {
       margin: 5px;
