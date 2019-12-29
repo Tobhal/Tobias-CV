@@ -18,9 +18,11 @@ function startup() {
     });
     localStorage.setItem("date" + i, "true");
   };
+
+  document.getElementById("darkmode").addEventListener("click", function () {
+    darkmode();
+  });
 };
-
-
 
 function hideData(data) {
   let element = document.getElementsByClassName(data)[0];
@@ -65,7 +67,6 @@ function changeDateInfo(element, index) {
       document.getElementsByClassName("date")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " year" : " years");
     }
     
-
     localStorage.setItem(date, "false");
   } else if (localStorage.getItem("date" + index) == "false") {
     let startDate = localStorage.getItem(dateStart);
@@ -79,4 +80,26 @@ function changeDateInfo(element, index) {
 
     localStorage.setItem(date, "true");
   }
+};
+
+function darkmode(darkmode) {   // Change the site to dark mode or not. you can define a true (dark mode) of false (white mode), if not the it will just change color.
+  if (darkmode == null) {   // checks if there is a defined true/false. If not then flip the color.
+    if ((localStorage.getItem("dark") == null) || (localStorage.getItem("dark") == "false") || (document.body.style.backgroundColor == "")) {
+      localStorage.setItem("dark", "true");
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+    } else if ((localStorage.getItem("dark") == "true") || (document.body.style.backgroundColor == "black")) {
+      localStorage.setItem("dark", "false");
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+    };
+  } else if (darkmode == true) {
+    localStorage.setItem("dark", "true");
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+  } else if (darkmode == false) {
+    localStorage.setItem("dark", "false");
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+  };
 };

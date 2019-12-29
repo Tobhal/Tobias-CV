@@ -5,6 +5,9 @@
 body {
   font-family: 'Roboto', sans-serif;
 
+  color: black;
+  background: white;
+
   @include templateGrid;
 }
 
