@@ -1,9 +1,18 @@
 window.onload = startup;
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem("dark") == null) {
     localStorage.setItem("dark", "false");
-  }
+  } else if (localStorage.getItem("dark") == "true") {
+    document.body.style.backgroundColor == "rgba(28, 28, 30, 1)";
+  };
+
+  document.getElementById("personaInfoCollaps").style.display = "none";
+  document.getElementById("jobCollaps").style.display = "none";
+  document.getElementById("educationCollaps").style.display = "none";
+  document.getElementById("knowlageCollaps").style.display = "none";
+
+
 });
 
 function startup() {
@@ -12,6 +21,12 @@ function startup() {
     document.documentElement.classList.toggle('theme--dark');
     document.getElementById('theme').classList.toggle('c-toggle--active');
   }
+  
+  document.body.classList.add('notransition');
+
+  document.getElementById("personaInfo").addEventListener("click", () => {
+    hideData("personaInfo");
+  });
 
   document.getElementById("job").addEventListener("click", function() {
     hideData("job");
@@ -34,6 +49,12 @@ function startup() {
   document.getElementById("themeButton").addEventListener("click", function () {
     darkmode();
   });
+
+  let bDay = new Date(document.getElementById("bday").innerHTML); 
+  let now = new Date();
+  let age = Math.round((now - bDay) / (365 * 1000 * 3600 * 24));
+  
+  document.getElementById("age").innerHTML = age + " År";
 };
 
 document.getElementById('theme').addEventListener('click', () => {
@@ -44,17 +65,20 @@ feather.replace();
 
 function hideData(data) {
   let element = document.getElementsByClassName(data)[0];
+  let elementCollaps = data + "Collaps";
 
   if (element.style.display != "none") {
-    console.log("show");
+    // Hide
     for (let i = 0; i < document.getElementsByClassName(data).length; i++) {
       document.getElementsByClassName(data)[i].style.display = "none"
     };
+    document.getElementById(elementCollaps).style.display = "";
   } else {
-    console.log("hidden");
+    // Show
     for (let i = 0; i < document.getElementsByClassName(data).length; i++) {
       document.getElementsByClassName(data)[i].style.display = ""
     };
+    document.getElementById(elementCollaps).style.display = "none";
   };
 };
 
@@ -76,9 +100,25 @@ function changeDateInfo(element, index) {
     
     let startDate = new Date(startDateHTML);
     let endDate = new Date(endDateHTML);
+    let todayDate = new Date();
     let dateBetween = (endDate - startDate) / (1000 * 3600 * 24);
 
-    if (dateBetween < 364) {
+    if (endDateHTML == "D.D") {
+
+      dateBetween = Math.round((todayDate - startDate) / (1000 * 3600 * 24));
+
+      if (dateBetween < 364) {
+        document.getElementsByClassName("dateEnd")[index].innerHTML = "";
+        document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " day" : " days");
+      } else {
+        document.getElementsByClassName("dateEnd")[index].innerHTML = "";
+        document.getElementsByClassName("dateStart")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " year" : " years");
+      }
+
+      
+
+    } else if (dateBetween < 364) {
+
       document.getElementsByClassName("dateEnd")[index].innerHTML = "";
       document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " day" : " days");
     } else {

@@ -1,17 +1,36 @@
 :root {
-  --system-base-9: rgba(28, 28, 30, 1);
-  --system-base-8: rgba(44, 44, 46, 1);
-  --system-base-7: rgba(58, 58, 60, 1);
-  --system-base-4: rgba(142, 142, 147, 1);
-  --system-base-2: rgba(199, 199, 204, 1);
-  --system-base-1: rgba(209, 209, 214, 1);
-  --system-base-50: rgba(229, 229, 234, 1);
+  // dark
+  --darkPrimaryColor: #121212;
+  --dark-00dp: rgba(255,255,255, 0.00);
+  --dark-01dp: rgba(255,255,255, 0.05);
+  --dark-02dp: rgba(255,255,255, 0.07);
+  --dark-03dp: rgba(255,255,255, 0.08);
+  --dark-04dp: rgba(255,255,255, 0.09);
+  --dark-06dp: rgba(255,255,255, 0.11);
+  --dark-08dp: rgba(255,255,255, 0.12);
+  --dark-12dp: rgba(255,255,255, 0.14);
+  --dark-16dp: rgba(255,255,255, 0.15);
+  --dark-24dp: rgba(255,255,255, 0.16);
+
+  --system-base-9: rgba(18, 18, 18, 1);
+	--system-base-8: rgba(44, 44, 46, 1);
+	--system-base-7: rgba(58, 58, 60, 1);
+	--system-base-6: rgba(72, 72, 74, 1);
+	--system-base-5: rgba(99, 99, 102, 1);
+	--system-base-4: rgba(142, 142, 147, 1);
+	--system-base-3: rgba(174, 174, 178, 1);
+	--system-base-2: rgba(199, 199, 204, 1);
+	--system-base-1: rgba(209, 209, 214, 1);
+	--system-base-50: rgba(229, 229, 234, 1);
+	--system-base-0: rgba(242, 242, 247, 1);
+  
   --secondary: var(--system-base-4);
   --root-bg: var(--system-base-50);
   --root-color: var(--system-base-7);
   --header-color: var(--system-base-9);
   --component-border: var(--system-base-2);
   --component-bg-hover: var(--system-base-1);
+  --link-color: var(--system-base-7);
 }
 
 :root.theme--dark {
@@ -20,9 +39,8 @@
   --header-color: var(--system-base-1);
   --component-border: var(--system-base-2);
   --component-bg-hover: var(--system-base-8);
+  --link-color: var(--system-base-5);
 }
-
-// 1 2 4 7 8 9 50
 
 // main.scss
 @import 'variables';
@@ -37,6 +55,12 @@ body {
   background: white;
 
   margin: 0;
+
+  transition: background-color 0s linear;
+
+  a {
+    color: var(--link-color);
+  }
 }
 
 figure {
@@ -53,7 +77,12 @@ figure {
 
 main {
   @include mainGrid;
-  margin: 0 0 0 10px;
+  margin: 10px;
+  padding: 5px;
+
+  // If i want to have a box for each element i can use this:
+  // background: var(--dark-01dp);
+  // border-radius: 15px;
 
   ul {
     background-color: $sectionColor;
@@ -62,13 +91,14 @@ main {
 
   h2 {
     margin: 10px 0 10px 0;
+    cursor: pointer;
   }
-  
+
   section {
     display: flex;
     margin-bottom: 5px;
 
-    p {
+      p {
       margin: 5px;
       padding: 0 5px 0 0;
     }
@@ -76,6 +106,7 @@ main {
     .date {
       min-width: 80px;
       border-right-style: solid;
+      cursor: pointer;
     }
   
     .information {
@@ -97,9 +128,22 @@ html {
 }
 
 .info {
-  margin: 0 0 5px 0;
-}
+  h1 {
+    cursor: pointer;
+  }
 
+  #personaInfoCollaps {
+  }
+
+  h1, p {
+    padding: 0 0 0 10px;
+    line-height: 1.6;
+  }
+  
+  .age {
+    color: --system-base-4;
+  }
+}
 
 .c-toggle {
   width: 4rem;
@@ -139,4 +183,12 @@ html {
 }
 .c-toggle--active .c-toggle__body {
   top: -3.2rem;
+}
+
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
