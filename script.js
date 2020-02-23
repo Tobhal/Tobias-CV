@@ -1,6 +1,18 @@
 window.onload = startup;
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  if (localStorage.getItem("dark") == null) {
+    localStorage.setItem("dark", "false");
+  }
+});
+
 function startup() {
+  if (localStorage.getItem("dark") == "true") {
+    localStorage.setItem("dark", "true");
+    document.documentElement.classList.toggle('theme--dark');
+    document.getElementById('theme').classList.toggle('c-toggle--active');
+  }
+
   document.getElementById("job").addEventListener("click", function() {
     hideData("job");
   });
@@ -19,10 +31,16 @@ function startup() {
     localStorage.setItem("date" + i, "true");
   };
 
-  document.getElementById("darkmode").addEventListener("click", function () {
+  document.getElementById("themeButton").addEventListener("click", function () {
     darkmode();
   });
 };
+
+document.getElementById('theme').addEventListener('click', () => {
+  darkmode();
+});
+
+feather.replace();
 
 function hideData(data) {
   let element = document.getElementsByClassName(data)[0];
@@ -87,22 +105,26 @@ function changeDateInfo(element, index) {
 
 function darkmode(darkmode) {   // Change the site to dark mode or not. you can define a true (dark mode) of false (white mode), if not the it will just change color.
   if (darkmode == null) {   // checks if there is a defined true/false. If not then flip the color.
-    if ((localStorage.getItem("dark") == null) || (localStorage.getItem("dark") == "false") || (document.body.style.backgroundColor == "")) {
-      localStorage.setItem("dark", "true");
-      document.body.style.backgroundColor = "black";
-      document.body.style.color = "white";
-    } else if ((localStorage.getItem("dark") == "true") || (document.body.style.backgroundColor == "black")) {
-      localStorage.setItem("dark", "false");
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "black";
-    };
-  } else if (darkmode == true) {
+    localStorage.getItem("dark") == "true" ? localStorage.setItem("dark", "false") : localStorage.setItem("dark", "true");
+    document.documentElement.classList.toggle('theme--dark');
+    document.getElementById('theme').classList.toggle('c-toggle--active');
+
+  } else if (darkmode == true && localStorage.getItem("dark") == "false") {
     localStorage.setItem("dark", "true");
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
-  } else if (darkmode == false) {
+    document.documentElement.classList.toggle('theme--dark');
+    document.getElementById('theme').classList.toggle('c-toggle--active');
+
+  } else if (darkmode == false && localStorage.getItem("dark") == "true") {
     localStorage.setItem("dark", "false");
-    document.body.style.backgroundColor = "white";
-    document.body.style.color = "black";
+    document.documentElement.classList.toggle('theme--dark');
+    document.getElementById('theme').classList.toggle('c-toggle--active');
   };
 };
+
+function genConstraints() {
+  var constraints = [];
+  document.querySelectorAll('input[type="checkbox"]:checked').forEach(item => {
+    constraints.push(item.value);
+  });
+  return constraints;
+}

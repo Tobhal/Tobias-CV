@@ -1,0 +1,8 @@
+TODO:
+- Make mobile verson
+- Update information
+- English verson
+  - Change based on location or browser language
+- fix long text
+  - Norges miljø- og biovitenskapelige universitet (NMBU), avdelig Skog og landskap - OD dagen
+- Add print out 

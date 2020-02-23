@@ -6,7 +6,25 @@
 
   // Small screen
   @media screen and (max-width: $smallScreen) {
+    grid-template-columns: 40% auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "picture info"
+    "main main"
+    "footer footer";
 
+    footer{
+      grid-area: footer;
+      width: 100%;
+
+      button {
+        float: right;
+      }
+    }
+
+    .c-toggle {
+      display: none;
+    }
   }
 
   // Normal screen
@@ -15,7 +33,11 @@
     grid-template-rows: 300px auto;
     grid-template-areas: 
     "picture main"
-    "info main"
+    "info main";
+
+    footer{
+      display: none;
+    }
   }
 
 }
