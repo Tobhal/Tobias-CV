@@ -61,10 +61,12 @@ function changeDateInfo(element, index) {
     let dateBetween = (endDate - startDate) / (1000 * 3600 * 24);
 
     if (dateBetween < 364) {
-      document.getElementsByClassName("date")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " day" : " days");
+      document.getElementsByClassName("dateEnd")[index].innerHTML = "";
+      document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " day" : " days");
     } else {
-      console.log(Math.round(dateBetween / 365))
-      document.getElementsByClassName("date")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " year" : " years");
+      //console.log(Math.round(dateBetween / 365))
+      document.getElementsByClassName("dateEnd")[index].innerHTML = "";
+      document.getElementsByClassName("dateStart")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " year" : " years");
     }
     
     localStorage.setItem(date, "false");
@@ -73,9 +75,10 @@ function changeDateInfo(element, index) {
     let endDate = localStorage.getItem(dateEnd);
 
     if (startDate == endDate) {
-      document.getElementsByClassName("date")[index].innerHTML = '<span class="dateStart dateEnd">' + startDate + '</span>';
+      document.getElementsByClassName("dateStart")[index].innerHTML = startDate;
     } else {
-      document.getElementsByClassName("date")[index].innerHTML = '<span class="dateStart">' + startDate + '</span> <br> <span class="dateEnd">' + endDate + '</span>';
+      document.getElementsByClassName("dateStart")[index].innerHTML = startDate;
+      document.getElementsByClassName("dateEnd")[index].innerHTML = endDate
     }
 
     localStorage.setItem(date, "true");
