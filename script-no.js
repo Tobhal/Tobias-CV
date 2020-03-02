@@ -1,11 +1,19 @@
 window.onload = startup;
 
 window.addEventListener('DOMContentLoaded', () => {
+  const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  console.log(userPrefersDark ? "dark mode thing":"light mode");
+
   if (localStorage.getItem("dark") == null) {
     localStorage.setItem("dark", "false");
   } else if (localStorage.getItem("dark") == "true") {
     document.body.style.backgroundColor == "rgba(28, 28, 30, 1)";
   };
+
+  if (userPrefersDark) {
+    localStorage.setItem("dark", "true")
+  }
 
   document.getElementById("personaInfoCollaps").style.display = "none";
   document.getElementById("jobCollaps").style.display = "none";
@@ -54,7 +62,7 @@ function startup() {
   let now = new Date();
   let age = Math.round((now - bDay) / (365 * 1000 * 3600 * 24));
   
-  document.getElementById("age").innerHTML = age + " År";
+  document.getElementById("age").innerHTML = age;
 };
 
 document.getElementById('theme').addEventListener('click', () => {
@@ -109,10 +117,10 @@ function changeDateInfo(element, index) {
 
       if (dateBetween < 364) {
         document.getElementsByClassName("dateEnd")[index].innerHTML = "";
-        document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " day" : " days");
+        document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " dag" : " dager");
       } else {
         document.getElementsByClassName("dateEnd")[index].innerHTML = "";
-        document.getElementsByClassName("dateStart")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " year" : " years");
+        document.getElementsByClassName("dateStart")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " år" : " år");
       }
 
       
@@ -120,11 +128,11 @@ function changeDateInfo(element, index) {
     } else if (dateBetween < 364) {
 
       document.getElementsByClassName("dateEnd")[index].innerHTML = "";
-      document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " day" : " days");
+      document.getElementsByClassName("dateStart")[index].innerHTML = dateBetween + 1 + ((dateBetween + 1) == 1 ? " dag" : " dager");
     } else {
       //console.log(Math.round(dateBetween / 365))
       document.getElementsByClassName("dateEnd")[index].innerHTML = "";
-      document.getElementsByClassName("dateStart")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " year" : " years");
+      document.getElementsByClassName("dateStart")[index].innerHTML =  (Math.round(dateBetween / 365)) + (Math.round(dateBetween / 365) == 1 ? " år" : " år");
     }
     
     localStorage.setItem(date, "false");
