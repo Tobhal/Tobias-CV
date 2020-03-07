@@ -50,6 +50,7 @@ body {
   @include templateGrid;
   
   font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
 
   color: black;
   background: white;
@@ -118,6 +119,10 @@ main {
       min-width: 100px;
     }
   }
+
+  div {
+    margin: 0 0 40px 0;
+  }
 }
 
 
@@ -135,9 +140,6 @@ html {
 .info {
   h1 {
     cursor: pointer;
-  }
-
-  #personaInfoCollaps {
   }
 
   h1, p {
@@ -196,4 +198,21 @@ html {
   -moz-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+}
+
+
+.languangeFlag {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  position: absolute;
+  top: 2rem;
+  right: 6.4rem;
+  cursor: pointer;
+}
+
+.flagHidden {
+  display: none;
+  top: 4rem;
+  right: 6.4rem;
 }

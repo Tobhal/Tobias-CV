@@ -19,8 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("jobCollaps").style.display = "none";
   document.getElementById("educationCollaps").style.display = "none";
   document.getElementById("knowlageCollaps").style.display = "none";
-
-
+  document.getElementById("summaryCollaps").style.display = "none";
 });
 
 function startup() {
@@ -36,26 +35,34 @@ function startup() {
     hideData("personaInfo");
   });
 
-  document.getElementById("job").addEventListener("click", function() {
+  document.getElementById("job").addEventListener("click", () => {
     hideData("job");
   });
-  document.getElementById("education").addEventListener("click", function() {
+  document.getElementById("education").addEventListener("click", () => {
     hideData("education");
   });
-  document.getElementById("knowlage").addEventListener("click", function() {
+  document.getElementById("knowlage").addEventListener("click", () => {
     hideData("knowlage");
   });
+  document.getElementById("summary").addEventListener("click", () => {
+    hideData("summary");
+  });
+  
 
   let element = document.getElementsByClassName("date")
   for (let i = 0; i < element.length; i++) {
-    element[i].addEventListener("click", function(){
+    element[i].addEventListener("click", () => {
       changeDateInfo(element, i);
     });
     localStorage.setItem("date" + i, "true");
   };
 
-  document.getElementById("themeButton").addEventListener("click", function () {
+  document.getElementById("themeButton").addEventListener("click", () => {
     darkmode();
+  });
+
+  document.getElementById("languangeButton").addEventListener("click", () => {
+    window.location = "index-en.html";
   });
 
   let bDay = new Date(document.getElementById("bday").innerHTML); 
@@ -63,6 +70,15 @@ function startup() {
   let age = Math.round((now - bDay) / (365 * 1000 * 3600 * 24));
   
   document.getElementById("age").innerHTML = age;
+
+  document.getElementsByClassName("languangeFlag")[0].addEventListener("click", () => {
+    if (document.getElementsByClassName("flagHidden")[0].style.display == "none" || document.getElementsByClassName("flagHidden")[0].style.display == "") {
+      document.getElementsByClassName("flagHidden")[0].style.display = "block";
+      
+    } else {
+      document.getElementsByClassName("flagHidden")[0].style.display = "none";
+    }
+  })
 };
 
 document.getElementById('theme').addEventListener('click', () => {
@@ -96,6 +112,12 @@ function changeDateInfo(element, index) {
   let startDateHTML = document.getElementsByClassName("dateStart")[index].innerHTML;
   let endDateHTML = document.getElementsByClassName("dateEnd")[index].innerHTML;
 
+  let startDateSplit = startDateHTML.split(".");
+  let endDateSplit = endDateHTML.split(".");
+
+  let startDateFormat = startDateSplit[2] + "-" + startDateSplit[1] + "-" + startDateSplit[0]
+  let endDateFormat = endDateSplit[2] + "-" + endDateSplit[1] + "-" + endDateSplit[0]
+
   let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   let date = "date" + index;
@@ -106,12 +128,12 @@ function changeDateInfo(element, index) {
     localStorage.setItem("startDate" + index, startDateHTML);
     localStorage.setItem("endDate" + index, endDateHTML);
     
-    let startDate = new Date(startDateHTML);
-    let endDate = new Date(endDateHTML);
+    let startDate = new Date(startDateFormat);
+    let endDate = new Date(endDateFormat);
     let todayDate = new Date();
     let dateBetween = (endDate - startDate) / (1000 * 3600 * 24);
 
-    if (endDateHTML == "D.D") {
+    if (endDateFormat == "D.D") {
 
       dateBetween = Math.round((todayDate - startDate) / (1000 * 3600 * 24));
 
