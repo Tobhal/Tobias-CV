@@ -65,7 +65,11 @@ function startup() {
     window.location = "index-en.html";
   });
 
-  let bDay = new Date(document.getElementById("bday").innerHTML); 
+  let bDayDate = document.getElementById("bday").innerHTML;
+  let bDaySplit = bDayDate.split(".");
+  bDayDate = bDaySplit[2] + "-" + bDaySplit[1] + "-" + bDaySplit[0];
+
+  let bDay = new Date(bDayDate); 
   let now = new Date();
   let age = Math.round((now - bDay) / (365 * 1000 * 3600 * 24));
   
@@ -133,7 +137,7 @@ function changeDateInfo(element, index) {
     let todayDate = new Date();
     let dateBetween = (endDate - startDate) / (1000 * 3600 * 24);
 
-    if (endDateFormat == "D.D") {
+    if (endDateHTML == "D.D") {
 
       dateBetween = Math.round((todayDate - startDate) / (1000 * 3600 * 24));
 
