@@ -79,7 +79,7 @@ figure {
 main {
   @include mainGrid;
   margin: 10px;
-  padding: 5px;
+  padding: 5px 5px 5px 20px;
 
   font-size: 1em;
 
@@ -215,4 +215,8 @@ html {
   display: none;
   top: 4rem;
   right: 6.4rem;
+}
+
+.hideWeb {
+  display: none;
 }

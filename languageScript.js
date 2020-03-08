@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   let language = navigator.language || navigator.userLanguage;
+
+  console.log(language);
  
   if (language == "no") {
     window.location.replace("https://www.hallingstad.me/tobias/index-no.html");
