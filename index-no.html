@@ -27,7 +27,7 @@
   <!-- script -->
   <script src="script-no.js"></script>
 
-  <title>Tobias Hallingstad</title>
+  <title>Tobias Hallingstad CV</title>
 </head>
 <body>
 
@@ -50,11 +50,12 @@
     </a>
   </div>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.21.0/feather.min.js'></script><script  src="./script-no.js"></script>
+  <script src='scripts/father.min.js'></script><script  src="./script-no.js"></script>
 
   <section class="info">
     <figure>
-      <img src="picture/loafturtle.jpg">
+      <!-- Person bilde her -->
+      <img src="">
     </figure>
 
     <h1 id="personaInfo">Personopplysninger:</h1>
@@ -64,21 +65,21 @@
       Født: <span id="bday">10.01.1999</span> (<span id="age"></span>) år<br>
       Fødested: Oslo <br>
       Språk: Norsk, Engelsk <br>
-      Sivil status: Ugift <br> <br>
-
+      Sivil status: Ugift <br>
+      Førerkort: B, AM <br>
+      <br>
       <b>Kontakt informasjon:</b> <br>
       Email: <a href="mailto:tobias@hallingstad.me"> tobias@hallingstad.me </a><br>
-      Telefon: 97472127 <br> <br>
-
+      Telefon: <a href="tel:+4797472127">97472127</a><br> 
+      <br>
       <b>Addresse:</b><br>
       BRA-veien 6D <br>
       1783 Halden
       <br> <br>
-      <b id="links">Lenket:</b><br>
+      <b id="links">Lenker:</b><br>
       Github: <a href="https://github.com/Tobhal">github.com/Tobhal</a><br>
       Skole prosjekt i HTML og Javascript:
       <a href="https://itstud.hiof.no/~tobiah/htdocs-new/">itstud.hiof.no/~tobiah/</a>
-
     </p>
   </section>
 
@@ -106,6 +107,23 @@
       </section>
     </div>
 
+    <!-- KNOWLAGE section -->
+    <div>
+      <h2 id="knowlage"> Kunnskap </h2>
+      <p id="knowlageCollaps">[...]</p>
+      <section class="knowlage">
+        <p class="information"><b>Programmering:</b><br>
+          Java, Javascript, HTML, CSS (med SCSS), Swift (iPhone), C++ , Git, Regex<br>
+          Xcode, Visual Studio, Intelij
+        </p>
+      </section>
+      <section class="knowlage">
+        <p class="information"> <b>Miljøer:</b> <br>
+          Windows, MacOS, Linux, Windows server 2016
+        </p>
+      </section>
+    </div>
+
     <!-- JOB section -->
     <div>
       <h2 id="job"> Yrkeserfaring </h2>
@@ -114,21 +132,15 @@
         <h3 class="hideWeb"> Økokrim </h3>
         <p class="date"><span class="dateStart">21.08.2017</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">20.08.2019</span></p>
         <p class="information">
-          <b class="hidePrint">Økokrim</b>
+          <b class="hidePrint">Økokrim</b><span class="hidePrint title"> - IKT-lærling</span>
           <br class="hidePrint"> <span>
-            Jobbet som IKT lærling på første linje brukerstøtte. <br>
-            Jeg var hovedsakelig på førstelinje, men grunnet mindre data avdeling ble jeg med på mesteparten av oppdrag som skjedde.
-            Hvis beslag avdelignen trengte å bygge noen PCer, og jeg hadde tid, tokk jeg jobben med å bygge PCene.
-            Når det kom varer var jeg den som ble ringt for å hente varene.
-            Jeg var med på å sette opp nye servere vi fikk, hvis jeg hadde tid.
-            <br> <br>
-            Data avdelignen sin job er å sette opp rettsaler hvis salene ikke har alt av data utstyr som Økokrim bruker i sakene dems.
-            I tillfeller der data avdelingen må sette opp data utstyr ble jeg med for å sette opp, dette resulterte til en dags tur til Svolvær tingrett.
-            Flese sakene ble holdt i nærheten av Oslo og hvis sakene ble holdt i Oslo tingrett hendte det at jeg måtte dra dit å fikse PC problemer, mens en sakk gikk.
-            <br> <br>
-            Jeg var også med på fleste eksterne måter data avdelignen var med på, eksempel er at jeg var med på møte med alle data avdeligner i hele politi norge.
-            På de møtene fikk jeg høre mye om hva slags problemer som er rundt om i norge og hvordan de forsjelige proplemene blir løst.
-
+            Ansvarlig for brkuerstøtte på førstelinje for alle ansatte i Økokrim. 
+            Løste saker som kom inn via helpdesk-løsningen, via telefon og via oppmøte.
+            Var også involvert i det meste av andre oppgaver i IKT-avdelingen, slik som å sette opp alt datautstyr i rettssaler i forkant av rettsaker både i Oslo og andre steder i landet, bygge og installere PCer, sette opp servere, og hente og plassere dataleveranser som kom til Økokrim.
+            Jeg utviklet i tillegg noen verktøy til internt bruk i PowerShell.
+            Jobbet tidvis sammen med deslagsavdelingen i Økokrim, der jeg blant annet fikk litt innblikk i datasikkerhet.
+            <br><br>
+            Jeg var også med på møter som dataavdelingen i Økokrim hadde med andre dataavdelinger i Politiet, der jeg fikk innblikk i hvordan flere IT-problemer ble løst i Politiet.
           </span>          
         </p>
       </section>
@@ -136,11 +148,10 @@
         <h3 class="hideWeb"> Akershus fylkeskomune </h3>
         <p class="date"><span class="dateStart">26.10.2016</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">18.11.2016</span></p>
         <p class="information">
-          <b class="hidePrint">Akershus fylkeskomune</b>
+          <b class="hidePrint">Akershus fylkeskomune</b><span class="hidePrint title"> - utplassering på IT-avdeling</span>
           <br class="hidePrint"> <span>
-            Jobbet på it avdelignen i utplaserings perioden på skolen. <br>
-            Gjorde mest små oppgaver som ikke trengte spesielle rettigheter i it systemer, grundet den korte lengene på utplaseringen. 
-            Jeg var også med rundt på tannklinikkene å fikse tenkiske problemer.
+            Løste IT-relaterte oppgaver i IKT-avdelingen.
+            Hjalp også til med å løse teknikse IT-problemer på flere tannklinikker.
           </span>          
         </p>
       </section>
@@ -148,10 +159,10 @@
         <h3 class="hideWeb"> ASKO Øst </h3>
         <p class="date"><span class="dateStart">06.08.2016</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">17.08.2016</span></p>
         <p class="information">
-          <b class="hidePrint">ASKO Øst</b>
+          <b class="hidePrint">ASKO Øst</b><span class="hidePrint title"> - Hjelpeman på lastebil</span>
           <br class="hidePrint"> <span>
-            Jobbet som hjelpeman på lastebil. Dette var en sommerjobb. <br>
-            Jeg hjalp lastebil sjofører med levering av mat. Jeg var med på alt fra lasting av mat inn i lastebilen til kasting av søppel når vi var tilbake.
+            Hjalp sjåfører med levering av matvarer til ASKO sine kunder.
+            Var med på alt fra lasting av varerer inn på lastebilen, lossing av varer for levering hos kunder, til kasting av søppel som vi tok med fra kunder.
           </span>          
         </p>
       </section>
@@ -159,9 +170,9 @@
         <h3 class="hideWeb"> Tusenfryd </h3>
         <p class="date"><span class="dateStart">06.06.2016</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">17.06.2016</span></p>
         <p class="information">
-          <b>Tusenfryd</b>
+          <b>Tusenfryd</b><span class="hidePrint title"> - Jobbet med attraksjoner</span>
           <br> <span>
-            Jobbet på atrakksjoner, men var ikke gammel nok til å passe på de store attraksjonene så jeg passer på de mindre, for det meste barne attraksjoner.
+            Jobbet på noen av barneattraksjonene på fornøyeksesoarken Tusenfryd.
           </span>          
         </p>
       </section>
@@ -169,11 +180,12 @@
         <h3 class="hideWeb"> Skiskytter VM/World cup i Oslo </h3>
         <p class="date"><span class="dateStart">29.02.2016</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">13.03.2016</span></p>
         <p class="information">
-          <b class="hidePrint">Skiskytter VM/World cup i Oslo</b>
+          <b class="hidePrint">Skiskytter VM/World cup i Oslo</b><span class="hidePrint title"> - Frivilig i hjelpemannskapet</span>
           <br class="hidePrint"> <span>
-            Jobbet med frivilig forpleining, servere mat til andre frivilige.
+            Jobbet som frivillig i hjelpemannskapet med å servere mat til andre frivillige.
+            Var også inngangsvakt og scenevakt under arrangement i Oslo sentrum under VM i 2016.
             <br> <br>
-            Jobbet på: <br>
+            Jobbet som frivillig på følgende arrangement: <br>
             VM (2016-02-29 til 2016-03-13) <br>
             World cup (2017 til 2020 i helgen)
           </span>
@@ -183,11 +195,10 @@
         <h3 class="hideWeb"> Europris ÅS </h3>
         <p class="date"><span class="dateStart">22.01.2016</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">03.06.2016</span></p>
         <p class="information">
-          <b class="hidePrint">Europris ÅS</b>
+          <b class="hidePrint">Europris ÅS</b><span class="hidePrint title"> - ekstrahjelp</span>
           <br class="hidePrint"> <span>
-            Jobbet gjenom utplasering på skolen vær fredag. 
-            Begynte med å hjelpe kunder, rydde i hyller og plasere produkter i hyller i riktig hylle etter git plan.
-            Mot slutten fikk jeg jobbe i kassen.
+            Yrkeserfaring gjennom skolen hver fredag.
+            Hjalp kunder, ryddet og plasserte varer i hyller, omstrukterte varer etter endringsplan fra Europris, og jobbet i kassen.
           </span>          
         </p>
       </section>
@@ -195,11 +206,11 @@
         <h3 class="hideWeb"> Norges miljø- og biovitenskapelige universitet (NMBU) </h3>
         <p class="date"><span class="dateStart">21.09.2015</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">04.12.2015</span></p>
         <p class="information">
-          <b class="hidePrint">Norges miljø- og biovitenskapelige universitet (NMBU)</b>
+          <b class="hidePrint">Norges miljø- og biovitenskapelige universitet (NMBU)</b><span class="hidePrint title"> - IKT-asistent</span>
           <br class="hidePrint"> <span>
-            Dette vag gjenom skolen og en gang i uken.
-            Jeg var på IT avdelingen og fikk være med rundt å hjelpe de ansatte med problemer som kom opp i løpet av arbeids dagen.
-            Etter noen uker ble jeg flyttet til Oslo for å hjelpe vetrenærhøyskolen med flytting over til NMBU sine systemer.
+            Yrkeserfaring gjennom skolen, jobbet fast en gang i uken. 
+            Var med IT avdelingen og hjalp ansatte ved NMBU som hadde IT problemer.
+            Hjalp også til med flytting av IT-systemer, fra Veterinærhøyskolen sine systemer til NMBU sine systemer.
           </span>          
         </p>
       </section>
@@ -207,10 +218,9 @@
         <h3 class="hideWeb"> Norges miljø- og biovitenskapelige universitet (NMBU), avdelig Skog og landskap - OD dagen </h3>
         <p class="date"><span class="dateStart dateEnd">29.10.2014</span></p>
         <p class="information">
-          <b class="hidePrint">Norges miljø- og biovitenskapelige universitet (NMBU), avdelig Skog og landskap - OD dagen</b>
+          <b class="hidePrint">Norges miljø- og biovitenskapelige universitet (NMBU), avdelig Skog og landskap - OD dagen</b><span class="hidePrint title"> - IKT-hjelp</span>
           <br class="hidePrint"> <span>
-            Jobbet gjenom OD dagen på skolen, som er en dag der alle elever prøver å finne seg en jobb for å sammle in penger til en veldedlighet. <br>
-            Jeg hjalp til med gjenerelle ting rundt om på kampus, som å flytte noen av arkivene.
+            Jobbet med forefallende oppgaver på campus på NMBU, som feks flytting av arkiv.
           </span>          
         </p>
       </section>
@@ -218,9 +228,9 @@
         <h3 class="hideWeb"> Berggård Amundsen & CO As Ski </h3>
         <p class="date"><span class="dateStart">01.04.2014</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">04.04.2014</span></p>
         <p class="information">
-          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b>
+          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b><span class="hidePrint title"> - Ekstrahjelp hos dataavdelig</span>
           <br class="hidePrint"> <span>
-            Jobben gikk ut på å rydde gamle lageret.
+            Ryddet og organiserte datalageret, samt ryddet i arkivsystemet.
           </span>          
         </p>
       </section>
@@ -228,9 +238,9 @@
         <h3 class="hideWeb"> Berggård Amundsen & CO As Ski </h3>
         <p class="date"><span class="dateStart">20.01.2014</span> <br class="hidePrint"> <span class="hideWeb"> - </span> <span class="dateEnd">24.01.2014</span></p>
         <p class="information">
-          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b>
+          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b><span class="hidePrint title"> - Ekstrahjelp hos dataavdelig</span>
           <br class="hidePrint"> <span>
-            Jobbet med å flytte filer fra et gammelt intranett til et nytt.
+            Flyttet filer fra et gammelt intranett til nytt intranett.
           </span>          
         </p>
       </section>
@@ -246,7 +256,7 @@
         <p class="information">
           <b class="hidePrint"> Dataingeniør ved Høgskolen i Østfold, bachelor </b>
           <br class="hidePrint"> <span>
-            Tokk y-veien, det er 6 uker med forkurs i matte og fysikk. Etter det hadde jeg ekstra matte, fysikk og norsk på skolen ved sidena vanlig ingeniør studie. Dette 
+            3-årig studie med fordypning i dataingeniørfaget, fokus på blant annet programmering, webutvikling, objektorientert tankegang, algoritmer, maskinvare og programvare, samt mattematikk, fysikk og komunikasjon (norks og engelsk).
           </span>          
         </p>
       </section>
@@ -267,29 +277,11 @@
         <p class="information">
           <b class="hidePrint">Håndball dommerkurs</b>
           <br class="hidePrint"> <span>
-            Håndball dommerkurt 1 og 2
+            Dommerkurs 1 og 2 i håndball
           </span>          
         </p>
       </section>
-    </div>
-    
-    <!-- KNOWLAGE section -->
-    <div>
-      <h2 id="knowlage"> Kunskap </h2>
-      <p id="knowlageCollaps">[...]</p>
-      <section class="knowlage">
-        <p class="information"><b>Programmering:</b><br>
-          Java, Javascript, HTML, CSS (med SCSS), Swift (iPhone), C++ , Git, regex<br>
-          Xcode, Visual Studio, Intelij
-        </p>
-      </section>
-      <section class="knowlage">
-        <p class="information"> <b>Miljøer:</b> <br>
-          Windows, MacOS og linux
-        </p>
-      </section>
-    </div>
-  
+    </div>  
   </main>
 
   <footer>

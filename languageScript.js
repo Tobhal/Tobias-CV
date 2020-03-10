@@ -3,11 +3,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   console.log(language);
  
-  if (language == "no") {
-    window.location.replace("https://www.hallingstad.me/tobias/index-no.html");
-    //  window.location = "https://www.hallingstad.me/tobias/index-no.html";
-  } else {
+  if (language == "en") {
     window.location.replace("https://www.hallingstad.me/tobias/index-en.html");
     //  window.location = "https://www.hallingstad.me/tobias/index-en.html";
+  } else {
+    window.location.replace("https://www.hallingstad.me/tobias/index-no.html");
+    //  window.location = "https://www.hallingstad.me/tobias/index-no.html";
   }
 });

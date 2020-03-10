@@ -31,6 +31,7 @@
   --component-border: var(--system-base-2);
   --component-bg-hover: var(--system-base-1);
   --link-color: var(--system-base-7);
+  --title-color: var(--system-base-7);
 }
 
 :root.theme--dark {
@@ -40,11 +41,14 @@
   --component-border: var(--system-base-2);
   --component-bg-hover: var(--system-base-8);
   --link-color: var(--system-base-5);
+  --title-color: var(--system-base-4);
 }
 
 // main.scss
 @import 'variables';
 @import 'layout';
+
+
 
 body {
   @include templateGrid;
@@ -99,14 +103,18 @@ main {
 
   section {
     display: flex;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 
-      p {
+    p {
       margin: 5px;
       padding: 0 5px 0 0;
 
       overflow: hidden;
       max-width: 100ch;
+    }
+
+    .title {
+      color: var(--title-color);
     }
   
     .date {
