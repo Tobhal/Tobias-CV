@@ -55,3 +55,8 @@ button {
 @page :right {
   margin: 1cm
 }
+
+@page {
+  size:  auto;   /* auto is the initial value */
+  margin: 0mm;  /* this affects the margin in the printer settings */
+}
