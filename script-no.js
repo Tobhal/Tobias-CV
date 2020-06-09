@@ -15,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem("dark", "true")
   }
 
+  // Get element by ID
   document.getElementById("personaInfoCollaps").style.display = "none";
   document.getElementById("jobCollaps").style.display = "none";
   document.getElementById("educationCollaps").style.display = "none";
@@ -35,6 +36,7 @@ function startup() {
     hideData("personaInfo");
   });
 
+  // Get element by ID
   document.getElementById("job").addEventListener("click", () => {
     hideData("job");
   });
@@ -47,15 +49,6 @@ function startup() {
   document.getElementById("summary").addEventListener("click", () => {
     hideData("summary");
   });
-  
-
-  let element = document.getElementsByClassName("date")
-  for (let i = 0; i < element.length; i++) {
-    element[i].addEventListener("click", () => {
-      changeDateInfo(element, i);
-    });
-    localStorage.setItem("date" + i, "true");
-  };
 
   document.getElementById("themeButton").addEventListener("click", () => {
     darkmode();
@@ -64,6 +57,24 @@ function startup() {
   document.getElementById("languangeButton").addEventListener("click", () => {
     window.location = "index-en.html";
   });
+
+
+  // Get element by class
+  let element = document.getElementsByClassName("date")
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener("click", () => {
+      changeDateInfo(element, i);
+    });
+    localStorage.setItem("date" + i, "true");
+  };
+
+  element = document.getElementsByClassName("course")
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener("click", () => {
+      hideCourseElement(element, i)
+    })
+  }
+  
 
   let bDayDate = document.getElementById("bday").innerHTML;
   let bDaySplit = bDayDate.split(".");
@@ -109,6 +120,18 @@ function hideData(data) {
     document.getElementById(elementCollaps).style.display = "none";
   };
 };
+
+function hideCourseElement(element, index) {
+  //console.log(element)
+  //console.log(element[0])
+  //console.log(element[0].childNodes)
+  //console.log(element[0].childNodes[3])
+
+  let tempElement = element[index].childNodes[1]
+
+  tempElement.style.display = tempElement.style.display === 'block' ? 'none' : 'block';
+  
+}
 
 function changeDateInfo(element, index) {
   //console.log(element + index);

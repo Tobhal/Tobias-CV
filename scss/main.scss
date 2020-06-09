@@ -125,6 +125,18 @@ main {
   
     .information {
       min-width: 100px;
+
+      .courses {
+        font-size: 2rem;
+      }
+      .course {
+        margin-left: 2rem;
+        .courseDetail{
+          display: none;
+          margin-left: 4rem;
+
+        }
+      }
     }
   }
 
