@@ -1,9 +1,18 @@
+var json = `
+{
+  "personalDetails": {
+    "name": "Tobias Hallingstad",
+    "born": "<span id='bday'>10.01.1999</span> (<span id='age'></span> år)"
+  }
+}
+`
+
 window.onload = startup;
 
 window.addEventListener('DOMContentLoaded', () => {
   const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  console.log(userPrefersDark ? "dark mode thing":"light mode");
+  //console.log(userPrefersDark ? "dark mode thing":"light mode");
 
   if (localStorage.getItem("dark") == null) {
     localStorage.setItem("dark", "false");
@@ -24,6 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function startup() {
+  //createContentFromJSON()
+
   if (localStorage.getItem("dark") == "true") {
     localStorage.setItem("dark", "true");
     document.documentElement.classList.toggle('theme--dark');
@@ -224,4 +235,12 @@ function genConstraints() {
     constraints.push(item.value);
   });
   return constraints;
+}
+
+function createContentFromJSON() {
+  let data = JSON.parse(json)
+
+  for (let prop in data.personalDetails) {
+    document.getElementsByClassName("personaInfo")[0].innerHTML += `${prop}: ${data.personalDetails[prop]} <br>`
+  }
 }
