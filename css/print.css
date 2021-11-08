@@ -1,0 +1,62 @@
+body {
+  font: 11pt Georgia, "Times New Roman", Times, serif;
+  line-height: 1.3;
+  background: #fff !important;
+  color: #000;
+}
+
+h3 {
+  margin: 20px 0 0 0;
+  display: inline-block;
+}
+
+button {
+  display: none;
+}
+
+.date {
+  margin: 0 0 20px 0;
+}
+
+.info figure {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 40%;
+}
+
+.info figure img {
+  width: 100%;
+}
+
+.c-toggle {
+  display: none;
+}
+.languangeFlag {
+  display: none;
+}
+
+.hidePrint {
+  display: none;
+}
+
+.job {
+  margin: 0 0 20px 0;
+}
+
+.information {
+  margin: 0 0 17px 0;
+}
+
+@page :left {
+  margin: 1cm
+}
+
+@page :right {
+  margin: 1cm
+}
+
+@page {
+  size:  auto;   /* auto is the initial value */
+  margin: 0mm;  /* this affects the margin in the printer settings */
+}

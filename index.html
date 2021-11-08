@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <!-- meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta http-equiv="Refresh" content="0; URL=https://www.hallingstad.me/tobias/index-no.html">
 
   <meta name="desctiption" content="">
   <meta name="keywords" content="">
@@ -22,15 +20,369 @@
   <meta name="@tobbhall">
 
   <!-- link -->
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="css/main.css">
+  <link rel="stylesheet" media="print" type="text/css" href="css/print.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- script -->
-  <script src="languageScript.js"></script>
+  <script src="script.js"></script>
 
-  <title>Tobias Hallingstad</title>
+  <title>Tobias Hallingstad CV</title>
 </head>
 <body>
 
+<!--
+  <figure>
+    <img src="picture/loafturtle.jpg">
+  </figure>
+-->
+  
+  
+  <div class="c-toggle" id="theme">
+    <div class="c-toggle__body"><i class="c-toggle__icon" data-feather="moon"></i><i class="c-toggle__icon" data-feather="sun"></i></div>
+  </div>
+  
+<!--
+  <div class="languangeFlag">
+    <img src="picture/norway.svg" alt="Norsk flagg. For bytting av språk. Knapp">
+
+    <a href="index-EN.html">
+      <img class="flagHidden" src="picture/united-kingdom.svg" alt="Engelsk flagg. Vises ikke">
+    </a>
+  </div>
+-->
+
+  <script src='scripts/father.min.js'></script><script  src="./script-no.js"></script>
+
+  <section class="info">
+    <figure>
+      <!-- Person bilde her -->
+      <img src="">
+    </figure>
+
+    <h1 id="personaInfo">Personopplysninger:</h1>
+    <p id="personaInfoCollaps">[...]</p>
+    <p class="personaInfo">
+        Tobias Hallingstad <br>
+        Født: <span id="bday">10.01.1999</span> (22 år)<br>
+        Fødested: Oslo <br>
+        Språk: Norsk, Engelsk <br>
+        Sivil status: Ugift <br>
+        Førerkort: B, AM <br>
+        <br>
+        <b>Kontakt informasjon:</b> <br>
+        Email: <a href="mailto:tobias@hallingstad.me"> tobias@hallingstad.me </a><br>
+        Telefon: <a href="tel:+4797472127">97472127</a><br> 
+        <br>
+        <b>Adresse:</b><br>
+        BRA-veien 8 <br>
+        1783 Halden
+        <br> <br>
+        <b id="links">Lenker:</b><br>
+        Github: <a href="https://github.com/Tobhal">github.com/Tobhal</a><br>
+        <!-- Skoleprosjekt i HTML og Javascript:
+        <a href="https://itstud.hiof.no/~tobiah/htdocs-new/">itstud.hiof.no/~tobiah/</a> -->
+    </p>
+  </section>
+
+  <main>
+    <!--  SUMMARY section  -->
+    <div>
+      <h2 id="summary"> Oppsummering </h2>
+      <p id="summaryCollaps">[...]</p>
+      <section class="summary">
+        <p>
+          Jeg studerer dataingeniør ved Høgskolen i Østfold. Her har jeg veldig mange spennende og lærerike fag. Før høyskolen var jeg IKT-lærling i to år hos Økokrim. Sommeren mellom Økokrim og høyskolen tok jeg et intensivt 6 ukers sommerkurs i matte og fysikk.
+          <br><br>
+          Jeg har fått god og variert erfaring i IT-faget gjennom studiet, gjennom lærlingperioden min og flere prosjekter på fritiden. Jeg er alltid positiv til både oppgaver jeg får og til mennesker jeg jobber med. Å hjelpe andre er også noe jeg liker veldig godt. På fritiden er jeg glad i å være i aktivitet og spilte aktivt håndball frem til jeg var 20 år. Nå trener jeg på helsestudio og jeg kjører snowboard når jeg har mulighet.
+          <br><br>
+          Min største interesse er IT, og i tillegg til studier driver jeg med flere prosjekter på fritiden. Ett av prosjektene er en spillmotor jeg lager med en venn, her buker vi C++ og Vulkan og koder mye fra bunnen av. I tillegg er jeg med i et større spillprosjekt med flere utviklere fra hele verden. Der vi bruker Unreal engine. Jeg har også en del andre mindre prosjekter som er tilgjengelig på GitHub-siden min.
+        </p>
+      </section>
+    </div>
+
+    <!-- KNOWLAGE section -->
+    <div>
+      <h2 id="knowlage"> Kunnskap </h2>
+      <p id="knowlageCollaps">[...]</p>
+      <section class="knowlage">
+        <p class="information"><b>Programmering:</b><br>
+          C++, Java (med Javalin og Vue.js), Swift, Vulkan (Grafikk API) <br>
+          Python, Javascript, HTML, PowerShell, MySQL <br>
+          ROS (Robot Operationg System) <br>
+          JSON, YAML
+        </p>
+      </section>
+      <section class="knowlage">
+        <p class="information"> <b>Miljøer:</b> <br>
+          Windows, MacOS, Linux, Windows server 2016 <br>
+          Xcode, Visual Studio, Intelij <br>
+          Visual Studio code, vim <br>
+          Unreal engine
+        </p>
+      </section>
+      <section class="knowlage">
+        <p class="information"> <b>Annet:</b> <br>
+          Git, Regex, Cisco nettverk
+        </p>
+      </section>
+    </div>
+
+    <!-- JOB section -->
+    <div>
+      <h2 id="job"> Yrkeserfaring </h2>
+      <p id="jobCollaps">[...]</p>
+
+      <section class="job">
+        <span class="header hideWeb">Økokrim</span>
+        <p class="date">
+          <span class="dateStart">21.08.2017</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">20.08.2019</span>
+        </p>
+        
+        <p class="information">
+          <b class="hidePrint">Økokrim</b><span class="hidePrint title"> - IKT-lærling</span>
+          <br class="hidePrint"> <span>
+            Ansvarlig for brukerstøtte på førstelinje for alle ansatte i Økokrim. 
+            Løste saker som kom inn via helpdesk-løsningen, via telefon og via oppmøte.
+            Var også involvert i det meste av andre oppgaver i IKT-avdelingen, slik som å sette opp alt datautstyr i rettssaler i forkant av rettsaker både i Oslo og andre steder i landet, bygge og installere PCer, sette opp servere, og hente og plassere dataleveranser som kom til Økokrim.
+            Jeg utviklet i tillegg noen verktøy til internt bruk i PowerShell.
+            Jobbet tidvis sammen med beslagsavdelingen i Økokrim, der jeg blant annet fikk litt innblikk i datasikkerhet.
+            <br><br>
+            Jeg var også med på møter som dataavdelingen i Økokrim hadde med andre dataavdelinger i Politiet, der jeg fikk innblikk i hvordan flere IT-problemer ble løst i Politiet.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Akershus fylkeskomune </h3>
+        <p class="date">
+          <span class="dateStart">26.10.2016</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span>
+          <span class="dateEnd">18.11.2016</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">Akershus fylkeskommune</b><span class="hidePrint title"> - Utplassering på IT-avdeling</span>
+          <br class="hidePrint"> <span>
+            Løste IT-relaterte oppgaver i IKT-avdelingen.
+            Hjalp også til med å løse tekniske IT-problemer på flere tannklinikker.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> ASKO Øst </h3>
+        <p class="date">
+          <span class="dateStart">06.08.2016</span>
+          <br class="hidePrint"> <span class="hideWeb"> - </span>
+          <span class="dateEnd">17.08.2016</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">ASKO Øst</b><span class="hidePrint title"> - Hjelpemann på lastebil</span>
+          <br class="hidePrint"> <span>
+            Hjalp sjåfører med levering av matvarer til ASKO sine kunder.
+            Var med på alt fra lasting av varerer inn på lastebilen, lossing av varer for levering hos kunder, til kasting av søppel som vi tok med fra kunder.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Tusenfryd </h3>
+        <p class="date">
+          <span class="dateStart">06.06.2016</span>
+          <br class="hidePrint"> <span class="hideWeb"> - </span>
+          <span class="dateEnd">17.06.2016</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">Tusenfryd</b><span class="hidePrint title"> - Jobbet med attraksjoner</span>
+          <br class="hidePrint"> <span>
+            Jobbet på noen av barneattraksjonene på fornøyeksesoarken Tusenfryd.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Skiskytter VM/World cup i Oslo </h3>
+        <p class="date">
+          <span class="dateStart">29.02.2016</span>
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">13.03.2016</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">Skiskytter VM/World cup i Oslo</b><span class="hidePrint title"> - Frivilig i hjelpemannskapet</span>
+          <br class="hidePrint"> <span>
+            Jobbet som frivillig i hjelpemannskapet med å servere mat til andre frivillige.
+            Var også inngangsvakt og scenevakt under arrangement i Oslo sentrum under VM i 2016.
+            <br> <br>
+            Jobbet som frivillig på følgende arrangement: <br>
+            VM (2016-02-29 til 2016-03-13) <br>
+            World cup (2017 til 2020 i helgen)
+          </span>
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Europris ÅS </h3>
+        <p class="date">
+          <span class="dateStart">22.01.2016</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">03.06.2016</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">Europris ÅS</b><span class="hidePrint title"> - Ekstrahjelp</span>
+          <br class="hidePrint"> <span>
+            Yrkeserfaring gjennom skolen hver fredag.
+            Hjalp kunder, ryddet og plasserte varer i hyller, omstrukterte varer etter endringsplan fra Europris, og jobbet i kassen.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Norges miljø- og biovitenskapelige universitet (NMBU) </h3>
+        <p class="date">
+          <span class="dateStart">21.09.2015</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">04.12.2015</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">Norges miljø- og biovitenskapelige universitet (NMBU)</b><span class="hidePrint title"> - IKT-assistent</span>
+          <br class="hidePrint"> <span>
+            Yrkeserfaring gjennom skolen, jobbet fast en gang i uken. 
+            Var med IT avdelingen og hjalp ansatte ved NMBU som hadde IT problemer.
+            Hjalp også til med flytting av IT-systemer, fra Veterinærhøyskolen sine systemer til NMBU sine systemer.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Norges miljø- og biovitenskapelige universitet (NMBU), avdelig Skog og landskap - OD dagen </h3>
+        <p class="date">
+          <span class="dateStart dateEnd">29.10.2014</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint">Norges miljø- og biovitenskapelige universitet (NMBU), avdelig Skog og landskap - OD dagen</b><span class="hidePrint title"> - IKT-hjelp</span>
+          <br class="hidePrint"> <span>
+            Jobbet med forefallende oppgaver på campus på NMBU, som feks flytting av arkiv.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Berggård Amundsen & CO As Ski </h3>
+        <p class="date">
+          <span class="dateStart">01.04.2014</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">04.04.2014</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b><span class="hidePrint title"> - Ekstrahjelp hos dataavdelingen</span>
+          <br class="hidePrint"> <span>
+            Ryddet og organiserte datalageret, samt ryddet i arkivsystemet.
+          </span>          
+        </p>
+      </section>
+
+      <section class="job">
+        <h3 class="hideWeb"> Berggård Amundsen & CO As Ski </h3>
+        <p class="date">
+          <span class="dateStart">20.01.2014</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">24.01.2014</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b><span class="hidePrint title"> - Ekstrahjelp hos dataavdelingen</span>
+          <br class="hidePrint"> <span>
+            Flyttet filer fra et gammelt intranett til nytt intranett.
+          </span>          
+        </p>
+      </section>
+    </div>
+    
+    <!-- EDUCATION section -->
+    <div>
+      <h2 id="education"> Utdanning </h2>
+      <p id="educationCollaps">[...]</p>
+      <section class="education">
+        <h3 class="hideWeb"> Dataingeniør ved Høgskolen i Østfold, bachelor </h3>
+        <p class="date">
+          <span class="dateStart">24.06.2019</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">D.D</span>
+        </p>
+
+        <p class="information">
+          <b class="hidePrint"> Dataingeniør ved Høgskolen i Østfold, bachelor </b>
+          <br class="hidePrint"> <span>
+            3-årig studie med fordypning i dataingeniørfaget, fokus på blant annet programmering, webutvikling, objektorientert tankegang, robotteknikk, styrings systemer, maskinvare og programvare, samt matematikk, fysikk og kommunikasjon (norks og engelsk).
+            <br>
+            <br>
+            <span class="courses">
+              <b>Kurs:</b>
+            </span>
+            <br>
+            <b>Y-veien - </b>
+            Matte, Fysikk, Norsk <br>
+            <b>Høst 2019 - </b>
+            Diskre matte, Innføring i programmering (JavaScript), Webutvikling <br>
+            <b>Vår 2020 - </b>
+            Objekt orientert programmering (Java), Fysikk og kjemi, Datateknik <br>
+            <b>Høst 2020 - </b>
+            Kalkulus, Datanettverk, Teknologi prosjekt <br>
+            <b>Vår 2021 - </b>
+            Statistikk, Inføring i datasikkerhet, Databasesystemer <br>
+            <b>Høst 2021 - </b>
+            Anvendt robotteknikk, Praktisk maskinlæring, Digital styring og cyber-fysikse systemer<br>
+
+          </span>
+        </p>
+      </section>
+
+      <section class="education">
+        <h3 class="hideWeb"> Drømtorp Videregåendeskole, ski </h3>
+        <p class="date">
+          <span class="dateStart">18.08.2015</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">22.06.2017</span>
+        </p>
+        <p class="information">
+          <b class="hidePrint">Drømtorp Videregåendeskole, ski</b>
+          <br class="hidePrint"> <span>
+            1. år - Service og samferdsel <br>
+            2. år - IKT Service fag
+          </span>          
+        </p>
+      </section>
+
+      <section class="education">
+        <h3 class="hideWeb"> Håndball dommerkurs </h3>
+        <p class="date">
+          <span class="dateStart">05.03.2013</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">25.03.2013</span>
+        </p>
+        <p class="information">
+          <b class="hidePrint">Håndball dommerkurs</b>
+          <br class="hidePrint"> <span>
+            Dommerkurs 1 og 2 i håndball
+          </span>          
+        </p>
+      </section>
+    </div>  
+  </main>
+
+  <footer>
+    <button id="themeButton"> endre Tema </button>
+    <!-- <button id="languangeButton"> Change to English </button> --> 
+  </footer>
 </body>
 </html>
