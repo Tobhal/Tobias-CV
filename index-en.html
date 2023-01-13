@@ -13,7 +13,7 @@
   <meta property="og:desctiption" name="twitter:card" content="">
   <meta property="og:type" content="website">
   <meta property="og:url" name="twitter:site" content="tobias.hallingstad.me">
-  <meta property="og:image" content="picture/loafturtle.jpg">
+  <meta property="og:image" content="picture/Selfie.jpg">
   <meta property="og:image:alt" content="">
   <meta property="og:site_name" content="">
   <meta property="og:locale" content="no-NO">
@@ -30,19 +30,13 @@
   <title>Tobias Hallingstad CV</title>
 </head>
 <body>
-
-<!--
-  <figure>
-    <img src="picture/loafturtle.jpg">
-  </figure>
--->
-  
-  
   <div class="c-toggle" id="theme">
     <div class="c-toggle__body"><i class="c-toggle__icon" data-feather="moon"></i><i class="c-toggle__icon" data-feather="sun"></i></div>
   </div>
   
+  <script src='scripts/father.min.js'></script><script src="./script-no.js"></script>
 <!--
+  <script src="scripts/collapsElement.js"></script>
   <div class="languangeFlag">
     <img src="picture/norway.svg" alt="Norsk flagg. For bytting av språk. Knapp">
 
@@ -52,19 +46,17 @@
   </div>
 -->
 
-  <script src='scripts/father.min.js'></script><script  src="./script-no.js"></script>
-
   <section class="info">
     <figure>
       <!-- Person bilde her -->
-      <img src="">
+      <img src="picture/Selfie.jpg">
     </figure>
 
-    <h1 id="personaInfo">Contact information:</h1>
+    <h2 id="personaInfo">Contact information:</h2>
     <p id="personaInfoCollaps">[...]</p>
     <p class="personaInfo">
         Tobias Hallingstad <br>
-        Born: <span id="bday">10.01.1999</span> (22 years old)<br>
+        Born: 10.01.1999 (24 years old)<br>
         Place of birth: Oslo <br>
         Language: Norwegian, English <br>
         Civil status: Unmarried <br>
@@ -72,7 +64,7 @@
         <br>
         <b>Contact information:</b> <br>
         Email: <a href="mailto:tobias@hallingstad.me"> tobias@hallingstad.me </a><br>
-        Telephone: <a href="tel:+4797472127">97472127</a><br> 
+        Telephone: <a href="tel:+4797472127">+47 97472127</a><br> 
         <br>
         <b>Address:</b><br>
         BRA-veien 8 <br>
@@ -92,21 +84,23 @@
       <p id="summaryCollaps">[...]</p>
       <section class="summary">
         <p>
-          I am studying to become a computer engineer at Østfold University Collage (HiØ). At HiØ I attend many exiting and instructive courses. Before I started at HiØ I worked at Økokrim for two years as an IT trainee. During the summer between ending work at Økokrim and starting at HiØ, I attended an intense summer course across 6 weeks that focused on mathematics and physics.
-          <br><br>
-          During my work at Økokrim, my studies and leisure time I have gained good experience in IT. I am always positive to both my colleagues and solving work tasks. To help people is something I strive to do. During my leisure time I like to be active. I have been an active handball player for several years in addition to exercise at a gym.
-          <br><br>
-          My main interest is IT. In addition to my studies I am working on multiple projects. One of these is a game engine I am making with fellow student. This engine engine we develop in C++ and Vulkan. We are developing most of the systems from scratch. The other project is a game project where I am working in an international team of developers. For this project we use the Unreal Engine. My GitHub page also contains several other projects I have beed working on.
+          I am studying for a master’s degree in Applied Computer Science at Østfold University College (HiØ), where I also completed my bachelor’s degree. At HiØ I have focused on machine learning and cyber-physical systems. During my study I have been a student assistant in multiple courses. I have had summer internships at The Norwegian Tax Administration and worked with some local companies like IFE and the Østfold Hospital. I worked as an IT trainee at Økokrim for two years before I started studying at HiØ.
+        </p>  
+        <p>
+          I have gained good and varied experiences in IT through my studies, summer internships, my trainee, and personal projects. I am always positive about the tasks I am given and the people I meet. Helping others is something I like and feel I am good at. In my spare time I like to be active by snowboarding in the winter and exercising at the local fitness center. I have also been an active handball player until I started my studies at HiØ.
+        </p>
+        <p>
+          My biggest interest is IT and programming. In addition to my studies I am working on several personal IT projects, like to develop a game engine using C++ and Vulkan, and to refactor programming projects from school into other programming languages like Rust and Kotlin. I have also contributed in an international developement team to develop a game, using C++ and the Unreal engine. Most of my projects are available on my personal <a href="https://github.com/Tobhal">GitHub</a>.
         </p>
       </section>
     </div>
 
     <!-- KNOWLAGE section -->
     <div>
-      <h2 id="knowlage"> Knowlage </h2>
+      <h2 id="knowlage"> Knowledge </h2>
       <p id="knowlageCollaps">[...]</p>
       <section class="knowlage">
-        <p class="information"><b>Programming:</b><br>
+        <p class="information"> <b>Programming languages:</b> <br>
           C++, Java (with Javalin and Vue.js), Swift, Vulkan (graphics API) <br>
           Python, Javascript, HTML, PowerShell, MySQL <br>
           ROS (Robot Operating System) <br>
@@ -132,169 +126,235 @@
     <div>
       <h2 id="job"> Work experience </h2>
       <p id="jobCollaps">[...]</p>
+      
+      <section class="job">
+        <h3 class="header hideWeb">The Norwegian Tax Administration</h3>
+        <h4 class="header hideWeb">Summer internship</h4>
+        <p class="date">
+          <span class="dateStart">13.06.2022</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">05.08.2022</span>
+        </p>
+        
+        <span class="information">
+          <h3 class="hidePrint">The Norwegian Tax Administration</h3><span class="hidePrint title"> - Summer internship </span>
+          <br class="hidePrint"> <p>
+            I worked in a team with three other internship students, where I developed both backend and fronted solutions. Our task was to develop a solution for the live page "Min Side" - the personal home page for the users. I used Kotlin and Spring to create a REST API for the backend solutions, used Typescript and React for the frontend tasks, and I wrote tests and integrated them with internal systems, like Jenkins.
+          </p>
+        </span>
+      </section>
 
       <section class="job">
-        <span class="header hideWeb">Økokrim</span>
+        <h3 class="header hideWeb">Østfold University College</h3>
+        <h4 class="header hideWeb">Student assistant</h4>
+        <p class="date hidePrint">
+          <span class="dateStart">21.08.2017</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">20.08.2019</span>
+        </p>
+        
+        <span class="information">
+          <h3 class="hidePrint">Østfold University College</h3><span class="hidePrint title"> - Student assistant </span>
+          <br class="hidePrint">
+          <p>
+            I have worked as a student assistant in multiple courses during my studies at Østfold University College.
+          </p>
+          <p>
+            <b>05.09.22 – 25.11.22:</b>
+            Digital management and Cyber physical systems.
+          </p>
+          <p>
+            I assisted to grade obligatory tasks and gave feedback to the students. Biweekly I hosted lectures on related topics to the lates task, the other weeks I helped each student group with challenges related to the final project.
+          </p>
+          <p>
+            <b>11.01.22 – 12.05.22:</b>
+            Programming 2 (introduction to OOP).
+          </p>
+          <p>
+            I assisted to grade obligatory tasks and gave feedback to the students. I also hosted physical class hours where students could ask for help and assistance.
+          </p>
+        </span>
+      </section>
+
+      <section class="job">
+        <h3 class="header hideWeb">Økokrim</h3>
+        <h4 class="header hideWeb">IT trainee</h4>
         <p class="date">
           <span class="dateStart">21.08.2017</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
           <span class="dateEnd">20.08.2019</span>
         </p>
         
-        <p class="information">
-          <b class="hidePrint">Økokrim</b><span class="hidePrint title"> - IT trainee </span>
-          <br class="hidePrint"> <span>
-            Responsible for first-line support for all employees at Økokrim. Solved cases using the helpdesk solution, telephone, mail and physical attendence. I was also involved with other IT tasks, like setting up servers, retrieve and place deliveries ordered by the data department ordered. In addition, I also developed some internal tools in PowerShell. Occasionally I worked with the data seizure department where I gained insight in data security.
-            <br><br>
+        <span class="information">
+          <h3 class="hidePrint">Økokrim</h3><span class="hidePrint title"> - IT trainee </span>
+          <br class="hidePrint"> <p>
+            Responsible for first-line support for all employees at Økokrim. Solved cases using the helpdesk solution, telephone, mail and physical attendence. I was also involved with other IT tasks, like setting up servers, retrieve and place deliveries ordered by the data department. In addition, I also developed some internal tools in PowerShell. Occasionally I worked with the data seizure department where I gained insight in data security.
+          </p>
+          <p>
             I also attended meetings with other data departments in the Police forces. At these meetings I gained insight into how the Police resolves IT problems.
-          </span>
-        </p>
+          </p>
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Akershus County Municipality </h3>
+        <h4 class="header hideWeb">Trainee in the IT department</h4>
         <p class="date">
           <span class="dateStart">26.10.2016</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span>
           <span class="dateEnd">18.11.2016</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Akershus County Municipality </b><span class="hidePrint title"> - Trainee in the IT department </span>
-          <br class="hidePrint"> <span>
+        <span class="information">
+          <h3 class="hidePrint"> Akershus County Municipality </h3><span class="hidePrint title"> - Trainee in the IT department </span>
+          <br class="hidePrint"> <p>
             Solved IT related tasks for the data department. I also joined when the department fixed problems at the dental clinics in the municipality.
-          </span>
-        </p>
+          </p>
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> ASKO East </h3>
+        <h4 class="header hideWeb">Truck helper</h4>
         <p class="date">
           <span class="dateStart">06.08.2016</span>
           <br class="hidePrint"> <span class="hideWeb"> - </span>
           <span class="dateEnd">17.08.2016</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> ASKO East </b><span class="hidePrint title"> - Truck helper </span>
-          <br class="hidePrint"> <span>
-            Helped drivers with delivering foods to ASKO customers. I participated in everything from loading goods into the trucks, unloading goods for delivery to customers and throwing rubbish we brought back from customers.
-          </span>
-        </p>
+        <span class="information">
+          <h3 class="hidePrint"> ASKO East </h3><span class="hidePrint title"> - Truck helper </span>
+          <br class="hidePrint"> <p>
+            I participated with loading goods into the trucks, unloading goods for delivery to customers, and collected and threw waste we brought back from customers.
+          </p>
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Tusenfryd </h3>
+        <h4 class="header hideWeb">Amusement park</h4>
         <p class="date">
           <span class="dateStart">06.06.2016</span>
           <br class="hidePrint"> <span class="hideWeb"> - </span>
           <span class="dateEnd">17.06.2016</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Tusenfryd </b><span class="hidePrint title"> - Amusement park </span>
-          <br class="hidePrint"> <span>
-            Worked on the attractions for children.
-          </span>
-        </p>
+        <span class="information">
+          <h3 class="hidePrint"> Tusenfryd </h3><span class="hidePrint title"> - Amusement park </span>
+          <br class="hidePrint"> <p>
+            Operated the attractions for kids.
+          </p>
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Biathlon World Championship/World cup in Oslo </h3>
+        <h4 class="header hideWeb">Volunteer aid crew</h4>
         <p class="date">
           <span class="dateStart">29.02.2016</span>
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
           <span class="dateEnd">13.03.2016</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Biathlon World Championship/World cup in Oslo </b><span class="hidePrint title"> - Volunteer aid crew </span>
-          <br class="hidePrint"> <span>
-            I did volunteer work in the relief crew with serving food to other volunteers. I also worked as entrance guard and stage guard under the arrangements in Oslo downtown during the 2016 World Championship.
-            <br> <br>
+        <span class="information">
+          <h3 class="hidePrint"> Biathlon World Championship/World cup in Oslo </h3><span class="hidePrint title"> - Volunteer aid crew </span>
+          <br class="hidePrint"> <p>
+            I did volunteer work in the support crew serving food to other volunteers. I also worked as an entrance guard
+and stage guard during the events in central Oslo during the WC 2016.
+          </p>
+          <p>
             I did volunteer work at the following events:
-            World Championship (2016-02-29 to 2016-03-13)
-            World Cup (2017 to 2020, during weekends)
-          </span>
-        </p>
+          </p>
+
+          <dl>
+            <dt>World Cup (2017 to 2020, during weekends)</dt>
+            <dt>World Championship (2016-02-29 to 2016-03-13)</dt>
+          </dl>
+            
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Europris ÅS </h3>
+        <h4 class="header hideWeb">Extra help</h4>
         <p class="date">
           <span class="dateStart">22.01.2016</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
           <span class="dateEnd">03.06.2016</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint">Europris ÅS</b><span class="hidePrint title"> - Extra help </span>
-          <br class="hidePrint"> <span>
+        <span class="information">
+          <h3 class="hidePrint">Europris ÅS</h3><span class="hidePrint title"> - Extra help </span>
+          <br class="hidePrint"> <p>
             Work experience during school every Friday. Helped customers, cleared and placed items on shelves according to change plan given from Europris. I also worked at checkout.
-          </span>
-        </p>
+          </p>
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Norwegian University of Life Sciences (NMBU) </h3>
+        <h4 class="header hideWeb">IT-assistant</h4>
         <p class="date">
           <span class="dateStart">21.09.2015</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
           <span class="dateEnd">04.12.2015</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Norwegian University of Life Sciences (NMBU) </b><span class="hidePrint title"> - IT-assistant </span>
-          <br class="hidePrint"> <span>
+        <span class="information">
+          <h3 class="hidePrint"> Norwegian University of Life Sciences (NMBU) </h3><span class="hidePrint title"> - IT-assistant </span>
+          <br class="hidePrint"> <p>
             Work experience during school, one day a week. Helped the computer department with different tasks including user support. I participated in moving IT systems for the Veterinary College move to NMBU IT systems.
-          </span>
-        </p>
+          </p>
+        </span>
       </section>
 
       <section class="job">
-        <h3 class="hideWeb"> Norwegian Universituy of Life Sciences (NMBU), Department of Forests and Landscape </h3>
+        <h3 class="hideWeb"> Norwegian University of Life Sciences (NMBU), Department of Forests and Landscape </h3>
+        <h4 class="header hideWeb">IT-assistant</h4>
         <p class="date">
           <span class="dateStart dateEnd">29.10.2014</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Norwegian University of Life Sciences (NMBU), Department of Forests and Landscape </b><span class="hidePrint title"> - IT-assistant </span>
-          <br class="hidePrint"> <span>
+        <span class="information">
+          <h3 class="hidePrint"> Norwegian University of Life Sciences (NMBU), Department of Forests and Landscape </h3><span class="hidePrint title"> - IT-assistant </span>
+          <br class="hidePrint"> <p>
             Worked with incidental tasks on campus at NMBU, such as moving the archives.
-          </span>
-        </p>
+          </p>
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Berggård Amundsen & CO As Ski </h3>
+        <h4 class="header hideWeb">IT-assistant</h4>
         <p class="date">
           <span class="dateStart">01.04.2014</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
           <span class="dateEnd">04.04.2014</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b><span class="hidePrint title"> - IT assistant </span>
-          <br class="hidePrint"> <span>
+        <span class="information">
+          <h3 class="hidePrint"> Berggård Amundsen & CO As Ski </h3><span class="hidePrint title"> - IT assistant </span>
+          <br class="hidePrint"> <p>
             Cleared and reorganized physical data storage and archive systems.
-          </span>          
-        </p>
+          </p>          
+        </span>
       </section>
 
       <section class="job">
         <h3 class="hideWeb"> Berggård Amundsen & CO As Ski </h3>
+        <h4 class="header hideWeb">IT-assistant</h4>
         <p class="date">
           <span class="dateStart">20.01.2014</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
           <span class="dateEnd">24.01.2014</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Berggård Amundsen & CO As Ski </b><span class="hidePrint title"> - IT assistant</span>
-          <br class="hidePrint"> <span>
-            Moved old intranet files over to a new intranet solution.
-          </span>          
-        </p>
+        <span class="information">
+          <h3 class="hidePrint"> Berggård Amundsen & CO As Ski </h3><span class="hidePrint title"> - IT assistant</span>
+          <br class="hidePrint"> <p>
+            Moved old intranet files to a new intranet solution.
+          </p>          
+        </span>
       </section>
     </div>
     
@@ -302,39 +362,104 @@
     <div>
       <h2 id="education"> Education </h2>
       <p id="educationCollaps">[...]</p>
+
+      <section class="education">
+        <h3 class="hideWeb"> Computer engineer at Østfold University College, Master </h3>
+        <p class="date">
+          <span class="dateStart">05.09.22</span> 
+          <br class="hidePrint"> <span class="hideWeb"> - </span> 
+          <span class="dateEnd">d.d</span>
+        </p>
+
+        <span class="information">
+          <h3 class="hidePrint"> Computer engineer at Østfold University College, Master </h3>
+          <br class="hidePrint"> 
+          <p>
+            2 years study with specialization in applied computer science. The focus is machine learning and Cyber-Physical Systems.
+          </p>
+
+          <h4>Courses:</h4>
+          <h4>Spring 2023</h4>
+          <ul>
+            <li>Advanced Topics in Machine Learning</li>
+            <li>Models and Digital Twins for the Internet of Things</li>
+            <li>Applied Computer Science Project</li>
+          </ul>
+
+          <h4>Autumn 2022</h4>
+          <ul>
+            <li>Machine Learning and Deep Learning</li>
+            <li>Hands-On Introduction to Cyber-Physical Systems</li>
+            <li>Scientific Methods in Computer Science</li>
+          </ul>
+
+        </span>
+      </section>
+
       <section class="education">
         <h3 class="hideWeb"> Computer engineer at Østfold University College, Bachelor </h3>
         <p class="date">
           <span class="dateStart">24.06.2019</span> 
           <br class="hidePrint"> <span class="hideWeb"> - </span> 
-          <span class="dateEnd">D.D</span>
+          <span class="dateEnd">29.04.2022</span>
         </p>
 
-        <p class="information">
-          <b class="hidePrint"> Computer engineer at Østfold University College, Bachelor </b>
-          <br class="hidePrint"> <span>
-            3 years study with specialization in computer engineering. The focus is mainly on programming, robotics, control systems, web development, software and hardware, in addition to mathematics, physics and communication (Norwegian and English).
-            <br>
-            <br>
-            <span class="courses">
-              <b>Courses:</b>
-            </span>
-            <br>
-            <b> Summer courses - </b>
-            Mathematics, Physics, Communications <br>
-            <b> Autumn 2019 - </b>
-            Discrete Math, Introduction to Programming (JavaScript), Web Development <br>
-            <b> Spring 2020 - </b>
-            Object Oriented Programming (Java), Physics and Chemistry, Computer Science <br>
-            <b> Autumn 2020 - </b>
-            Calculus, Computer Network, Technology project <br>
-            <b> Spring 2021 - </b>
-            Statistics, Introduction to Data Security, Database Systems <br>
-            <b> Autumn 2021 - </b>
-            Applied robotics, Practical machine learning, Digital control and cyber-physical systems <br>
+        <span class="information">
+          <h3 class="hidePrint"> Computer engineer at Østfold University College, Bachelor </h3>
+          <br class="hidePrint"> 
+          <p>
+            3 years study with specialization in computer engineering. The focus was mainly on programming, robotics, control systems, web development, software and hardware, in addition to mathematics, physics and communication (Norwegian and English).
+            </p>
 
-          </span>
-        </p>
+            <h4>Courses:</h4>
+            <h4>Spring 2022</h4>
+            <ul>
+              <li>Algorithms and data structures</li>
+              <li>Bachelor's thesis</li>
+            </ul>
+
+            <h4>Autumn 2021</h4>
+            <ul>
+              <li>Applied robotics</li>
+              <li>Practical machine learning</li>
+              <li>Digital control and cyber-physical systems</li>
+            </ul>
+
+            <h4>Spring 2021</h4>
+            <ul>
+              <li>Statistics</li>
+              <li>Introduction to Data Security</li>
+              <li>Database Systems</li>
+            </ul>
+
+            <h4>Autumn 2020</h4>
+            <ul>
+              <li>Calculus</li>
+              <li>Computer Network</li>
+              <li>Technology project</li>
+            </ul>
+
+            <h4>Spring 2020</h4>
+            <ul>
+              <li>Object Oriented Programming (Java)</li>
+              <li>Physics and Chemistry</li>
+              <li>Computer Science</li>
+            </ul>
+
+            <h4>Autumn 2019</h4>
+            <ul>
+              <li>Discrete Math</li>
+              <li>Introduction to Programming (JavaScript)</li>
+              <li>Web Development</li>
+            </ul>
+
+            <h4>Summer courses</h4>
+            <ul>
+              <li>Mathematics</li>
+              <li>Physics</li>
+              <li>Communications</li>
+            </ul>
+        </span>
       </section>
 
       <section class="education">
