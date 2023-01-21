@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "print.css",
+	"sources": [
+		"../scss/print.scss"
+	],
+	"sourcesContent": [
+		"html {\n    section {\n        break-inside: avoid;\n    }\n}\n\nbody {\n    font: 11pt Georgia, \"Times New Roman\", Times, serif;\n    line-height: 1.3;\n    background: #fff !important;\n    color: #000;\n}\n\n#job, #education, #summary, #knowlage {\n    margin-block-start: 1.66em;\n    margin-block-end: 0;\n}\n\nmain {\n    ul {\n        margin-top: 0;\n    }\n}\n\nh3 {\n    margin: 20px 0 0 0;\n    display: inline-block;\n}\n\nbutton {\n    display: none;\n}\n\n.date {\n    margin: 0 0 20px 0;\n}\n\n.info {\n\n    figure {\n        float: right;\n        margin: 0;\n        padding: 0;\n        width: 30%;\n\n        img {\n            width: 100%;\n        }\n    }\n}\n\n.job {\n    margin-bottom: 0.5em;\n}\n\nsection {\n\n    .job {\n        margin: 0 0 20px 0;\n    }\n\n    h4 {\n        margin: 0;\n    }\n}\n\n.c-toggle {\n    display: none;\n}\n\n.languangeFlag {\n    display: none;\n}\n\n.hidePrint {\n    display: none;\n}\n\n.information {\n    margin: 0 0 17px 0;\n}\n\n@page {\n    size: auto;\n    /* auto is the initial value */\n    margin: 0mm;\n    /* this affects the margin in the printer settings */\n}\n\n@page :left {\n    margin: 1cm\n}\n\n@page :right {\n    margin: 1cm\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AACI,IADA,CACA,OAAO,CAAC;EACJ,YAAY,EAAE,KAAK;CACtB;;;AAGL,AAAA,IAAI,CAAC;EACD,IAAI,EAAE,6CAA6C;EACnD,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,eAAe;EAC3B,KAAK,EAAE,IAAI;CACd;;;AAED,AAAA,IAAI,EAAE,UAAU,EAAE,QAAQ,EAAE,SAAS,CAAC;EAClC,kBAAkB,EAAE,MAAM;EAC1B,gBAAgB,EAAE,CAAC;CACtB;;;AAED,AACI,IADA,CACA,EAAE,CAAC;EACC,UAAU,EAAE,CAAC;CAChB;;;AAGL,AAAA,EAAE,CAAC;EACC,MAAM,EAAE,UAAU;EAClB,OAAO,EAAE,YAAY;CACxB;;;AAED,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;CAChB;;;AAED,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,UAAU;CACrB;;;AAED,AAEI,KAFC,CAED,MAAM,CAAC;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,GAAG;CAKb;;;AAXL,AAQQ,KARH,CAED,MAAM,CAMF,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;CACd;;;AAIT,AAAA,IAAI,CAAC;EACD,aAAa,EAAE,KAAK;CACvB;;;AAED,AAEI,OAFG,CAEH,IAAI,CAAC;EACD,MAAM,EAAE,UAAU;CACrB;;;AAJL,AAMI,OANG,CAMH,EAAE,CAAC;EACC,MAAM,EAAE,CAAC;CACZ;;;AAGL,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;CAChB;;;AAED,AAAA,cAAc,CAAC;EACX,OAAO,EAAE,IAAI;CAChB;;;AAED,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;CAChB;;;AAED,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,UAAU;CACrB;;AAED,KAAK;EACD,IAAI,EAAE,IAAI;EACV,+BAA+B;EAC/B,MAAM,EAAE,GAAG;EACX,qDAAqD;;;AAGzD,KAAK,CAAL,KAAK;EACD,MAAM,EAAE,GACZ;;;AAEA,KAAK,CAAL,MAAK;EACD,MAAM,EAAE,GACZ"
+}
