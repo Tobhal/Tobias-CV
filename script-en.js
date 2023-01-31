@@ -21,7 +21,7 @@ function startup() {
     document.documentElement.classList.toggle('theme--dark');
     document.getElementById('theme').classList.toggle('c-toggle--active');
   }
-  
+
   document.body.classList.add('notransition');
 
   document.getElementById("personaInfo").addEventListener("click", () => {
